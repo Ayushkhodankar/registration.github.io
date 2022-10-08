@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+     
+  
+    <title>Regisration Form </title>
+    <style></style> 
+</head>
+<body>
+    <div class="container" >
+        <header>Admission Form</header>
+
+        <form action="#" name="contactForm" onsubmit="return validateForm()">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Personal Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Full Name (As On Marksheet)<span class="error" id="nameonmrkErr" style="color: red;"></span></label>
+                            <input type="text" placeholder="Enter your name" name="nameonmrk" id="nameonmrk" autocomplete="off"><!--required-->
+                            
+                        </div>
+
+
+                        <div class="input-field">
+                            <label>Gender <span class="error" id="genderErr" style="color: red;"></span></label>
+                            <select id="gender" name="gender" id="gender"><!--required-->
+                                <option disabled selected value="0">Select gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option  value="Others">Others</option>
+                            </select>
+                            
+                        </div>
+
+                        <div class="input-field">
+                            <label>Date of Birth</label>
+                            <input type="date" placeholder="Enter birth date" name="dob" id="dob"><!--required-->
+                        </div>
+
+                        <div class="input-field">
+                            <label>Email<span class="error" id="emailErr" style="color: red;"></span></label>
+                            <input type="text" placeholder="Enter your email" id="email" name="email" ><!--required-->
+                            
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mobile Number  <span class="error" id="mobileErr" style="color: red;"></span></label>
+                            <input type="number" placeholder="Enter mobile number" id="mobileno" name="mobileno" ><!--required-->
+                           
+                        </div>
+
+                        <div class="input-field">
+                            <label>Guardian Mobile Number <span class="error" id="parentsmobilenoErr" style="color: red;"></span></label>
+                            <input type="number" placeholder="Enter mobile number" id="parentsmobileno" name="parentsmobileno" ><!--required-->
+                            
+                        </div>
+
+                        <div class="input-field">
+                            <label>Address <span class="error" id="addressErr" style="color: red;"></span></label>
+                            <input type="text" placeholder="Enter address" id="address" name="address" ><!--required-->
+                            
+                        </div>
+
+                        <div class="input-field">
+                            <label>City <span class="error" id="cityErr" style="color: red;"></span></label>
+                            <input type="text" placeholder="Enter your city" id="city" name="city"><!--required-->
+                            
+                        </div>
+
+                        <div class="input-field">
+                            <label>Pin Code <span class="error" id="pincodeErr" style="color: red;"></span></label>
+                            <input type="text" placeholder="Enter pin code" id="pincode" name="pincode" ><!--required-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details ID">
+                    <span class="title">Education/Job Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Working  <span class="error" id="designationErr" style="color: red;"></span></label>
+                            <select name="designation" id="designation"><!--required-->
+                                <option disabled selected value="0">Select</option>
+                                <option value="Working">Working</option>
+                                <option value="Student">Student</option>
+                                <option value="Others">Others</option>
+                            </select>
+                           
+                        </div>
+
+                        <div class="input-field">
+                            <label>College/Company Name  <span class="error" id="comnameErr" style="color: red;"></span></label>
+                            <input type="text" placeholder="Enter College/Company Name" id="comname" name="comname" ><!--required-->
+                        </div>
+
+                        <div class="input-field">
+                            <label>Enrollment Number  <span class="error" id="enrollErr" style="color: red;"></span></label>
+                            <input type="number" placeholder="Enter Enrollment Number" name="enroll" id="enroll" ><!--required-->
+                           
+                        </div>
+
+                       
+                    </div>
+
+                   
+                </div> 
+                <button class="nextBtn">
+                    <span class="btnText">Next <b>></b></span>
+                    <!-- <i class="uil uil-navigator"></i> -->
+                </button>
+            </div>
+
+            <div class="form second">
+                <div class="details address">
+                    <span class="title">Branch Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Branch <span class="error" id="branchErr" style="color: red;"></span></label>
+                            <select id="branch" name="branch" ><!--required-->
+                                <option disabled selected value="0" >Select Branch</option>
+                                <option value="Bhande Plot">Bhande Plot</option>
+                                <option value="Tiranga Chowk">Tiranga Chowk</option>
+                                <option value="Friends colony">Friends colony</option>
+                            </select>
+                            
+                        </div>
+
+                        <div class="input-field">
+                            <label>Course <span class="error" id="courseErr" style="color: red;"></span></label>
+                            <select name="course" id="course" required>
+                                <option value="Industrial Java Training (Full Stack)">Industrial Java</option>
+                                <option value="C Programming with Project">C</option>
+                                <option value="C++ Programming with Project">C++</option>
+                                <option value="C & C++ Programming with Project">C & C++</option>
+                                <option value="Core Java Programming with Project">Core Java</option>
+                                <option value="Advance Java Programming with Project">Adv Java</option>
+                            </select>
+                            
+                        </div>
+
+                        <div class="input-field">
+                            <label>Batch Timing <span class="error" id="batchtimeErr" style="color: red;"></span></label>
+                            <select id="batchtime" name="batchtime" required>
+                                <option disabled selected value="0">Select Batch Time</option>
+                                <option value="9.00 TO 10.00 AM">9.00 TO 10.00 AM</option>
+                                <option value="10.00 TO 10.00 AM">10.00 TO 10.00 AM</option>
+                                <option value="11.00 TO 12.00 PM">11.00 TO 12.00 PM</option>
+                                <option value="12.00 TO 1.00 PM">12.00 TO 1.00 PM</option>
+                                <option value="1.00 TO 2.00 PM">1.00 TO 2.00 PM</option>
+                                <option value="2.00 TO 3.00 PM">2.00 TO 3.00 PM</option>
+                                <option value="3.00 TO 4.00 PM">3.00 TO 4.00 PM</option>
+                                <option value="4.00 TO 5.00 PM">4.00 TO 5.00 PM</option>
+                                <option value="5.00 TO 6.00 PM">5.00 TO 6.00 PM</option>
+                                <option value="6.00 TO 7.00 PM">6.00 TO 7.00 PM</option>
+                                <option value="7.00 TO 8.00 PM">7.00 TO 8.00 PM</option>
+                                <option value="8.00 TO 9.00 PM">8.00 TO 9.00 PM</option>
+                            </select>
+                            
+                        </div>
+
+                        <div class="input-field">
+                            <label>Tutor Name   <span class="error" id="tutornameErr" style="color: red;"></span></label>
+                            <input type="text" placeholder="Enter tutor name" name="tutorname" id="tutorname" ><!--required-->
+                           
+                        </div>
+
+                        <div class="input-field">
+                            <label>Student Photo Upload</label>
+                            <input type="file" style="padding-top: 9px;"><!--required-->
+                            
+                        </div>
+
+                        <div class="input-field">
+                            <label>Document Photo Upload</label>
+                            <input type="file" style="padding-top: 9px;"><!--required-->
+                        </div>
+
+                       
+
+                    </div>
+                </div>
+
+                <div class="details family">
+                    <span class="title">Payment Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Total Fees<span class="error" id="totalfeesErr" style="color: red;"></span></label>
+                            <input type="number" placeholder="Enter total fees" name="totalfees" id="totalfees" ><!--required-->
+                        
+                        </div>
+
+                        <div class="input-field">
+                            <label>Paid Fees</label><span class="error" id="paidfeesErr" style="color: red;"></span>
+                            <input type="number" placeholder="Enter paid fees"name="paidfees" id="paidfees" ><!--required-->
+                        </div>
+
+                        <div class="input-field">
+                            <label>Payment Type <span class="error" id="paytypeErr" style="color: red;"></span></label>
+                            <select name="paytype" id="paytype"><!--required-->
+                                <option disabled selected value="0">Select Type</option>
+                                <option value="Cash">Cash</option>
+                                <option value="Online">Online</option>
+                                <option value="Cheque">Cheque</option>
+                            </select> 
+                                                  
+                        </div>
+
+                        <div class="input-field">
+                            <label>Online Transation No./ Cheque No. <span class="error" id="chequenoErr" style="color: red;"></span></label>
+                            <input type="text" placeholder="Enter Transation No./ Cheque No." name="chequeno" id="chequeno"><!--required-->
+                            
+                        </div>
+
+                        <div class="input-field">
+                            <label>Date</label>
+                            <input type="date" placeholder="Enter admission date" name="admndate" id="admndate"><!--required-->
+                        </div>
+
+                        <div class="input-field">
+                            <label>Receipt Number  <span class="error" id="receiptErr" style="color: red;"></span></label>
+                            <input type="text" placeholder="Enter receipt number" name="receipt" id="receipt" ><!--required-->
+                           
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <div class="backBtn">
+                            <!-- <i class="uil uil-navigator"></i> -->
+                            <span class="btnText"><b> </b>Back</span>
+                        </div>
+                        
+                        <button class="sumbit">
+                            <span class="btnText">Submit ✔</span>
+                            <!-- <i class="uil uil-navigator"></i> -->
+                        </button>
+                    </div>
+                </div> 
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
